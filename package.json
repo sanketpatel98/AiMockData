@@ -1,21 +1,30 @@
 {
-  "name": "trial",
+  "name": "aimockdata",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "build": "babel src --out-dir dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mock data, mock, ai mock data",
+    "data-generation",
+    "api",
+    "schema",
+    "json",
+    "utility"
+  ],
+  "author": "Sanket Patel",
+  "license": "MIT",
   "dependencies": {
     "@google/generative-ai": "^0.16.0",
     "dotenv": "^16.4.5",
     "json5": "^2.2.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.8",
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "jest": "^29.7.0"
