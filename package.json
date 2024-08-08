@@ -9,7 +9,10 @@
     "build": "babel src --out-dir dist"
   },
   "keywords": [
-    "mock data, mock, ai mock data",
+    "gemini api",
+    "mock data",
+    "mock",
+    "ai mock data",
     "data-generation",
     "api",
     "schema",
@@ -28,5 +31,9 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "jest": "^29.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanketpatel98/AiMockData"
   }
 }
