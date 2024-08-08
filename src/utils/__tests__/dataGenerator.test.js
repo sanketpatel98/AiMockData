@@ -5,12 +5,12 @@ describe('generateData', () => {
   test('should generate data correctly', async () => {
     const number = 10;
     const parameters = [
-      { name: 'state', isArray: false },
+      { name: 'province', isArray: false },
       { name: 'capital', isArray: false },
       { name: 'cities', isArray: true },
       { name: 'population', isArray: false },
     ];
-    const topic = 'All Canadian States';
+    const topic = 'All Canadian Provinces';
 
     const data = await generateData(number, parameters, topic);
 

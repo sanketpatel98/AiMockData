@@ -1,5 +1,9 @@
 # aimockdata
 
+[![GitHub Repo](https://img.shields.io/github/repo-size/sanketpatel98/AiMockData?style=flat-square)](https://github.com/sanketpatel98/AiMockData)
+[![npm Version](https://img.shields.io/npm/v/aimockdata?style=flat-square)](https://www.npmjs.com/package/aimockdata)
+[![npm Downloads](https://img.shields.io/npm/dm/aimockdata?style=flat-square)](https://www.npmjs.com/package/aimockdata)
+
 `aimockdata` is a powerful library for generating dynamic data based on specified parameters. 🚀 It’s designed to help you quickly create mock data for various applications, allowing you to define attributes and their types, and generate data accordingly. 🛠️
 
 It is based on Google Gemini (gemini-1.5-flash). To use this library, you will need a Gemini free API key. 🔑 You can obtain your API key from [Google Gemini API](https://ai.google.dev/gemini-api/docs/api-key).
@@ -38,42 +42,15 @@ import aimockdata from 'aimockdata';
 
 const number = 10;
 const parameters = [
-  { name: 'state', isArray: false },
+  { name: 'province', isArray: false },
   { name: 'capital', isArray: false },
   { name: 'cities', isArray: true },
   { name: 'population', isArray: false },
 ];
-const topic = 'All Canadian States';
+const topic = 'All Canadian Provinces';
 
 aimockdata(number, parameters, topic)
   .then(data => console.log(data))
   .catch(error => console.error('Error generating data:', error));
 ```
-## Customizing Inputs
-
-You can customize the `parameters` array to generate mock data that fits your specific needs:
-
-- **`name`**: Specify the names of the attributes you want in your data. Each name represents a field in the generated data objects.
-- **`isArray`**: Set this to `true` if the attribute should be an array of values, or `false` if it should be a single value.
-
-
-### Example: Generating Mock Data for Latest News Articles
-
-Here's an example of how to generate mock data for the latest news articles using live data:
-
-```javascript
-const number = 5; // Number of articles to generate
-const parameters = [
-  { name: 'headline', isArray: false },
-  { name: 'author', isArray: false },
-  { name: 'publishDate', isArray: false },
-  { name: 'tags', isArray: true },
-  { name: 'content', isArray: false },
-];
-const topic = 'News Articles';
-
-aimockdata(number, parameters, topic)
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-
-```
+For more detailed documentation, please visit [our full documentation](https://github.com/sanketpatel98/AiMockData/blob/master/doc.md).
