@@ -7,38 +7,13 @@ import { logSchemaAndPrompt, logResponseText, logPerformance } from '../lib/perf
 import json5 from 'json5'; // Using json5 for more relaxed parsing
 import validateInputs from './inputValidator.js'; // Import the validation function
 
-/**
- * @typedef {Object} Options
- * @property {boolean} [logPerformanceData=false] - Whether to log performance data.
- * @property {boolean} [logSchema=false] - Whether to log the generated schema and prompt.
- * @property {boolean} [logRawData=false] - Whether to log the raw response data.
- */
-
-/**
- * Generates data using Google AI.
- * 
- * @param {number} number - The number of items to generate.
- * @param {Array<{name: string, isArray: boolean}>} parameters - The parameters to use for generation.
- * @param {string} topic - The topic of the data generation.
- * @param {Options} [options={}] - Optional logging options.
- * @returns {Promise<Array<Object>>} - The generated data.
- */
-
-const generateData = async (number, parameters, topic, options = {}) => {
-  
-
+const generateData = async (number, parameters, topic, logPerformanceData = false, logSchema = false, logRawData = false) => {
   try {
-    validateInputs(number, parameters, topic, options);
+    validateInputs(number, parameters, topic);
   } catch (error) {
     handleError(error);
     return [];
   }
-
-  const {
-    logPerformanceData = false,
-    logSchema = false,
-    logRawData = false,
-  } = options;
 
   const dynamicSchema = generateDynamicSchema(parameters);
   const dynamicPrompt = generateDynamicPrompt(number, parameters, topic);
