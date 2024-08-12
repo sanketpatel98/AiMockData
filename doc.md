@@ -61,14 +61,14 @@ The parameters argument is an `array` of objects that define the schema for the 
 
 - `isArray` (boolean): Indicates whether the parameter is an array.
 Example
-javascript
-Copy code
+```javascript
 const parameters = [
   { name: 'state', isArray: false },    // Single string parameter
   { name: 'capital', isArray: false },  // Single string parameter
   { name: 'cities', isArray: true },    // Array of strings
   { name: 'population', isArray: false } // Single string parameter
 ];
+```
 - `Options`
 You can also pass additional options to control logging and performance metrics:
 
