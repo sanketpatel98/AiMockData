@@ -101,7 +101,7 @@ const topic = 'Recent Software Development Tools';
 })();
 ```
 ### 🕵️‍♂️ Pokemon list with details
-```
+```js
 import aimockdata from 'aimockdata';
 
 const number = 5;
