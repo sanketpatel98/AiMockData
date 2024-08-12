@@ -75,7 +75,20 @@ You can also pass additional options to control logging and performance metrics:
     - `logPerformanceData` (boolean): If true, performance metrics will be logged. Default is false.
     - `logSchema` (boolean): If true, the generated schema and prompt will be logged. Default is false.
      - `logRawData` (boolean): If true, the raw response data will be logged. Default is false.
-
+```js
+const options = {
+  logPerformanceData: true, // Log performance metrics
+  logSchema: false,         // Do not log the generated schema and prompt
+  logRawData: true          // Log the raw response data
+};
+aimockdata(number, parameters, topic, options)
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
 ## Examples
 ### 📊 Latest Programming Languages Trends
 ```js 
