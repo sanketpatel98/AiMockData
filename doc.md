@@ -47,7 +47,7 @@ const parameters = [
   { name: 'cities', isArray: true },
   { name: 'population', isArray: false },
 ];
-const topic = 'All Canadian States';
+const topic = 'All Canadian Provinces';
 
 aimockdata(number, parameters, topic)
   .then(data => console.log(data))
